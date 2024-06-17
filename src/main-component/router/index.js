@@ -43,9 +43,9 @@ const AllRoute = () => {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/Wedding">
         <Routes>
-          <Route path='/Wedding/' element={<Homepage/>} />
+          <Route path='/' element={<Homepage/>} />
           <Route path='home' element={<Homepage/>} />
           <Route path='home2' element={<Homepage2/>} />
           <Route path='home3' element={<HomePage3/>} />
@@ -83,7 +83,6 @@ const AllRoute = () => {
           <Route path='login' element={<LoginPage/>} />
           <Route path='register' element={<SignUpPage/>} />
           <Route path='forgot-password' element={<ForgotPassword/>} />
-          <Route path="*" element={<Navigate to="/Wedding/"/>} />
         </Routes>
       </BrowserRouter>
 
