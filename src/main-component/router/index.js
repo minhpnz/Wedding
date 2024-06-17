@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Homepage from '../HomePage'
 import Homepage2 from '../HomePage2'
@@ -83,6 +83,7 @@ const AllRoute = () => {
           <Route path='login' element={<LoginPage/>} />
           <Route path='register' element={<SignUpPage/>} />
           <Route path='forgot-password' element={<ForgotPassword/>} />
+          <Route path="*" element={<Navigate to="/Wedding/"/>} />
         </Routes>
       </BrowserRouter>
 
