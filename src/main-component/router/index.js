@@ -43,6 +43,7 @@ const AllRoute = () => {
 
   return (
     <div className="App">
+      <h2>savs</h2>
       <BrowserRouter basename="/Wedding">
         <Routes>
           <Route path='/' element={<Homepage/>} />
