@@ -55,10 +55,11 @@ const PortfolioSection2 = (props) => {
                                 {Portfolios.map((portfolio, pitem) => (
                                     <div className="grid" key={pitem}>
                                         <div className="img-holder">
-                                            <ReactFancyBox
+                                            <img src={portfolio.Pimg}></img>
+                                            {/* <ReactFancyBox
                                                 thumbnail={portfolio.Pimg}
                                                 image={portfolio.Pimg}
-                                                />
+                                                /> */}
                                         </div>
                                     </div>
                                 ))}
