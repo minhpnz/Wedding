@@ -14,6 +14,7 @@ class RSVP extends Component {
         meal: '',
         service: '',
         guest: '',
+        cango: '',
         error: {}
     }
 
@@ -35,26 +36,20 @@ class RSVP extends Component {
             email,
             address,
             service,
-            meal,
+            cango,
             guest, error } = this.state;
 
         if (name === '') {
-            error.name = "Please enter your name";
+            error.name = "Hãy điền tên";
         }
         if (email === '') {
-            error.email = "Please enter your email";
-        }
-        if (address === '') {
-            error.address = "Please enter your address";
-        }
-        if (service === '') {
-            error.service = "Please Select your service";
+            error.email = "Hãy điền lời chúc";
         }
         if (guest === '') {
-            error.guest = "Please Select your Guest List";
+            error.guest = "Hãy chọn số người đi cùng";
         }
-        if (meal === '') {
-            error.meal = "Select Select Your Meal";
+        if (cango === '') {
+            error.cango = "Hãy chọn có đi hoặc không";
         }
 
 
@@ -70,6 +65,7 @@ class RSVP extends Component {
                 address: '',
                 meal: '',
                 guest: '',
+                cango: '',
                 error: {}
             })
         }
@@ -82,6 +78,7 @@ class RSVP extends Component {
             service,
             guest,
             meal,
+            cango,
             error } = this.state;
 
         return(
@@ -89,60 +86,48 @@ class RSVP extends Component {
                 <div className="container">
                     <div className="wpo-contact-section-wrapper">
                         <div className="wpo-contact-form-area">
-                            <SectionTitle MainTitle={'Are you attending?'}/>
+                            <SectionTitle MainTitle={'Bạn có tham dự hay không ?'}/>
                             <form onSubmit={this.subimtHandler} className="form">
                                 <div className="row">
                                     <div>
                                         <div className="form-field">
-                                            <input value={name} onChange={this.changeHandler} className="form-control" type="text" name="name" placeholder="Name"/>
+                                            <input value={name} onChange={this.changeHandler} className="form-control" type="text" name="name" placeholder="Họ và Tên"/>
                                             <p>{error.name ? error.name : ''}</p>
                                         </div>
                                     </div>
                                     <div>
-                                        <div className="form-field">
-                                            <input onChange={this.changeHandler} value={email} type="email" className="form-control" name="email" placeholder="Email"/>
-                                            <p>{error.email ? error.email : ''}</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="form-field">
-                                            <input onChange={this.changeHandler} value={address} type="text" className="form-control" name="address" placeholder="address"/>
-                                            <p>{error.address ? error.address : ''}</p>
-                                        </div>
-                                    </div>
-                                    <div>
                                         <select name="service" className="form-control" value={service} onChange={this.changeHandler}>
-                                            <option>Service</option>
-                                            <option>Photography</option>
-                                            <option>The Rehearsal Dinner</option>
-                                            <option>The Afterparty</option>
-                                            <option>Videographers</option>
-                                            <option>Perfect Cake</option>
-                                            <option>All Of The Above</option>
+                                            <option>Bạn Bè</option>
+                                            <option>Họ Hàng</option>
+                                            <option>Đồng Nghiệp</option>
+                                            <option>Khác</option>
                                         </select>
                                         <p>{error.service ? error.service : ''}</p>
                                     </div>
                                     <div>
+                                        <div className="form-field">
+                                            <input onChange={this.changeHandler} value={email} type="text" className="form-control" name="email" placeholder="Lời chúc cho Cô Dâu/Chú Rễ"/>
+                                            <p>{error.email ? error.email : ''}</p>
+                                        </div>
+                                    </div>
+                                    <div>
                                         <select name="guest" className="form-control" value={guest} onChange={this.changeHandler}>
-                                            <option>Number Of Guests</option>
+                                            <option>Số người</option>
+                                            <option>0</option>
                                             <option>01</option>
                                             <option>02</option>
                                             <option>03</option>
                                             <option>04</option>
-                                            <option>05</option>
                                         </select>
                                         <p>{error.guest ? error.guest : ''}</p>
                                     </div>
                                     <div>
-                                        <select name="meal" className="form-control last" value={meal} onChange={this.changeHandler}>
-                                            <option>Meal Preferences</option>
-                                            <option>Chicken Soup</option>
-                                            <option>Motton Kabab</option>
-                                            <option>Chicken BBQ</option>
-                                            <option>Mix Salad</option>
-                                            <option>Beef Ribs </option>
+                                        <select name="cango" className="form-control" value={cango} onChange={this.changeHandler}>
+                                            <option>Đi hoặc Không</option>
+                                            <option>Đi</option>
+                                            <option>Không Đi</option>
                                         </select>
-                                        <p>{error.meal ? error.meal : ''}</p>
+                                        <p>{error.cango ? error.cango : ''}</p>
                                     </div>
                                     <div className="submit-area">
                                         <div className="form-submit">

@@ -9,22 +9,22 @@ import LocationMap from '../Modal'
 const Events = [
     {
         Simg: sImg1,
-        title:'The Reception',
-        li1:'Monday, 25 Sep, 2022 1:00 PM – 4:30 PM',
-        li2:'Estern Star Plaza, Road 123, USA',
+        title:'LỄ CƯỚI',
+        li1:'Thứ 3, Ngày 9 Tháng 7, 2024 11:00 Trưa',
+        li2:'Hướng Hóa',
     },
-    {
-        Simg: sImg2,
-        title:'THE CEREMONY',
-        li1:'Monday, 25 Sep, 2022 1:00 PM – 4:30 PM',
-        li2:'Estern Star Plaza, Road 123, USA',
-    },
-    {
-        Simg: sImg3,
-        title:'Wedding Party',
-        li1:'Monday, 25 Sep, 2022 1:00 PM – 4:30 PM',
-        li2:'Estern Star Plaza, Road 123, USA',
-    },
+    // {
+    //     Simg: sImg2,
+    //     title:'THE CEREMONY',
+    //     li1:'Monday, 25 Sep, 2022 1:00 PM – 4:30 PM',
+    //     li2:'Estern Star Plaza, Road 123, USA',
+    // },
+    // {
+    //     Simg: sImg3,
+    //     title:'Wedding Party',
+    //     li1:'Monday, 25 Sep, 2022 1:00 PM – 4:30 PM',
+    //     li2:'Estern Star Plaza, Road 123, USA',
+    // },
 
 ]
 
@@ -36,9 +36,9 @@ const EventSection = (props) => {
                 <div className="wpo-event-wrap">
                     <div className="row">
                         {Events.map((event, eitem) => (
-                            <div className="col col-lg-4 col-md-6 col-12" key={eitem}>
+                            <div className="col" key={eitem}>
                                 <div className="wpo-event-item">
-                                    <div className="wpo-event-img">
+                                    <div className="wpo-event-img" style={{"display":"flex","justify-content":"center","align-item":"center"}}>
                                         <img src={event.Simg} alt=""/>
                                     </div>
                                     <div className="wpo-event-text">

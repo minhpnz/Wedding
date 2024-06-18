@@ -2,7 +2,7 @@ import React from 'react'
 import TimeCountDown from '../countdown'
 import hImg1 from '../../images/slider/shape.png'
 import hImg2 from '../../images/slider/shape2.png'
-import hImg3 from '../../images/slider/s1.jpg'
+import hImg3 from '../../images/couple/couple-1.jpeg'
 import hImg4 from '../../images/slider/shape3.png'
 import hImg5 from '../../images/slider/shape4.png'
 
@@ -18,10 +18,11 @@ const Hero = (props) => {
                                 <div className="wpo-static-hero-inner">
                                     <div className="shape-1"><img src={hImg1} alt="hImg1"/></div>
                                     <div data-swiper-parallax="300" className="slide-title">
-                                        <h2>Daniel & Jessica</h2>
+                                        <h2>Ngoc Thanh & Hoang Ai </h2>
+                
                                     </div>
                                     <div data-swiper-parallax="400" className="slide-text">
-                                        <p>We Are Getting Married Jul 8, 2022</p>
+                                        <p>Lễ Kết Hôn - Ngày 9 Tháng 7, 2024</p>
                                     </div>
                                     <div className="wpo-wedding-date">
                                         <div className="clock-grids">

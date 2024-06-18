@@ -26,8 +26,8 @@ const HomePage =() => {
             <PortfolioSection2/>
             <RSVP/>
             <EventSection/>
-            <PartnerSection/>
-            <BlogSection/>
+            {/* <PartnerSection/> */}
+            {/* <BlogSection/> */}
             <Footer/> 
             <Scrollbar/>
         </Fragment>
