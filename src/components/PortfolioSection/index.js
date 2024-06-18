@@ -45,7 +45,7 @@ const PortfolioSection = (props) => {
                                         <div className="img-holder">
                                             <ReactFancyBox
                                                 thumbnail={portfolio.Pimg}
-                                                image={portfolio.Pimg}
+                                                image='../../images/couple/couple-1.jpeg'
                                                 />
                                         </div>
                                     </div>

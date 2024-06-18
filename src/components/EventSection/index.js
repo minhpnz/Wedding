@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionTitle from '../SectionTitle'
-import sImg1 from '../../images/event/1.jpg'
+import sImg1 from '../../images/couple/couple-1.jpeg'
 import sImg2 from '../../images/event/2.jpg'
 import sImg3 from '../../images/event/3.jpg'
 import LocationMap from '../Modal'
