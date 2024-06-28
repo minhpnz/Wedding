@@ -34,9 +34,9 @@ const EventSection = (props) => {
             <div className="container">
                 <SectionTitle MainTitle={'TIME AND PLACE'} />
                 <div className="wpo-event-wrap">
-                    <div className="row">
+                    <div className="row" style={{display: "block"}} >
                         {Events.map((event, eitem) => (
-                            <div className="col" style={{display: "block"}} key={eitem}>
+                            <div className="col" key={eitem}>
                                 <div className="wpo-event-item">
                                     <div className="wpo-event-img" style={{"display":"flex","justify-content":"center","align-item":"center"}}>
                                         <img src={event.Simg} alt=""/>
