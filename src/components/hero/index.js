@@ -24,6 +24,7 @@ const Hero = (props) => {
                                     <div data-swiper-parallax="400" className="slide-text">
                                         <p>Hướng Hóa - 11:00 Ngày 9 Tháng 7, 2024</p>
                                     </div>
+                                    <i class="fa fa-heart" aria-hidden="true"></i>
                                     <div data-swiper-parallax="400" className="slide-text">
                                         <p>Quy Nhơn - 17:00 Ngày 27 Tháng 7, 2024</p>
                                     </div>
