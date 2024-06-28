@@ -45,6 +45,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
