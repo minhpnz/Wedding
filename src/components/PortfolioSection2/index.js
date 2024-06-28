@@ -1,14 +1,11 @@
 import React from 'react'
 import SectionTitle from '../SectionTitle'
-import pImg1 from '../../images/couple/couple-1.jpeg'
-import pImg2 from '../../images/couple/couple-1.jpeg'
-import pImg3 from '../../images/couple/couple-1.jpeg'
-import pImg4 from '../../images/couple/couple-1.jpeg'
-import pImg5 from '../../images/couple/couple-1.jpeg'
-import pImg6 from '../../images/couple/couple-1.jpeg'
-import pImg7 from '../../images/couple/couple-1.jpeg'
-import pImg8 from '../../images/couple/couple-1.jpeg'
-import pImg9 from '../../images/couple/couple-1.jpeg'
+import pImg1 from '../../images/moments/2.jpg'
+import pImg2 from '../../images/moments/1.jpg'
+import pImg3 from '../../images/moments/3.jpg'
+import pImg4 from '../../images/moments/4.jpg'
+import pImg5 from '../../images/moments/5.jpg'
+import pImg6 from '../../images/moments/6.jpg'
 import ReactFancyBox from 'react-fancybox'
 import 'react-fancybox/lib/fancybox.css'
 
@@ -32,22 +29,13 @@ const Portfolios = [
     {
         Pimg:pImg6,
     },
-    {
-        Pimg:pImg7,
-    },
-    {
-        Pimg:pImg8,
-    },
-    {
-        Pimg:pImg9,
-    },
 ] 
 
 const PortfolioSection2 = (props) => {
     return(
         <section className={`wpo-portfolio-section section-padding ${props.pClass}`} id="gallery">
             <div className="container">
-                <SectionTitle MainTitle={'Captured Moments'}/>
+                <SectionTitle MainTitle={'Khoảnh Khắc'}/>
                 <div className="sortable-gallery">
                     <div className="row">
                         <div className="col-lg-12">

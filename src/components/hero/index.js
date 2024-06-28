@@ -2,7 +2,7 @@ import React from 'react'
 import TimeCountDown from '../countdown'
 import hImg1 from '../../images/slider/shape.png'
 import hImg2 from '../../images/slider/shape2.png'
-import hImg3 from '../../images/couple/couple-1.jpeg'
+import hImg3 from '../../images/main.jpg'
 import hImg4 from '../../images/slider/shape3.png'
 import hImg5 from '../../images/slider/shape4.png'
 
@@ -22,7 +22,10 @@ const Hero = (props) => {
                 
                                     </div>
                                     <div data-swiper-parallax="400" className="slide-text">
-                                        <p>Lễ Kết Hôn - Ngày 9 Tháng 7, 2024</p>
+                                        <p>Hướng Hóa - 11:00 Ngày 9 Tháng 7, 2024</p>
+                                    </div>
+                                    <div data-swiper-parallax="400" className="slide-text">
+                                        <p>Quy Nhơn - 17:00 Ngày 27 Tháng 7, 2024</p>
                                     </div>
                                     <div className="wpo-wedding-date">
                                         <div className="clock-grids">

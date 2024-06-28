@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar'
 import Hero from '../../components/hero'
 import StorySection from '../../components/StorySection';
 import CoupleSection from '../../components/CoupleSection'
-import VideoSection from '../../components/VideoSection'
+// import VideoSection from '../../components/VideoSection'
 import PortfolioSection2 from '../../components/PortfolioSection2';
 import EventSection from '../../components/EventSection';
 import RSVP from '../../components/RSVP';
@@ -22,7 +22,7 @@ const HomePage =() => {
             <Hero/>
             <CoupleSection/>
             <StorySection/>
-            <VideoSection/>
+            {/* <VideoSection/> */}
             <PortfolioSection2/>
             <RSVP/>
             <EventSection/>

@@ -9,7 +9,7 @@ import timg5 from '../../images/team/img-5.jpg'
 import timg6 from '../../images/team/img-6.jpg'
 import timg7 from '../../images/team/img-7.jpg'
 import timg8 from '../../images/team/img-8.jpg'
-import VideoSection from "../VideoSection";
+// import VideoSection from "../VideoSection";
 
 const Brides = [
   {
@@ -100,7 +100,7 @@ const BrideGrooms = (props) => {
           </div>
         </div>
       </div>
-      <VideoSection/>
+      {/* <VideoSection/> */}
       <div className="wpo-team-section pt-120 section-padding">
         <div className="container">
           <SectionTitle MainTitle={'Groomsmen'} />

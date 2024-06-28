@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar'
 import Hero2 from '../../components/hero2';
 import StorySection from '../../components/StorySection';
 import CoupleSection2 from '../../components/CoupleSection2';
-import VideoSection from '../../components/VideoSection'
+// import VideoSection from '../../components/VideoSection'
 import PortfolioSection2 from '../../components/PortfolioSection2';
 import EventSection from '../../components/EventSection';
 import RSVP from '../../components/RSVP';
@@ -24,7 +24,7 @@ const HomePage2 =() => {
             <WeddingTime/>
             <CoupleSection2/>
             <StorySection/>
-            <VideoSection/>
+            {/* <VideoSection/> */}
             <PortfolioSection2/>
             <RSVP/>
             <EventSection/>

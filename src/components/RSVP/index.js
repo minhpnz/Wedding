@@ -49,7 +49,7 @@ class RSVP extends Component {
             error.guest = "Hãy chọn số người đi cùng";
         }
         if (cango === '') {
-            error.cango = "Hãy chọn có đi hoặc không";
+            error.cango = "Vui lòng xác nhận tham dự";
         }
 
 
@@ -86,7 +86,7 @@ class RSVP extends Component {
                 <div className="container">
                     <div className="wpo-contact-section-wrapper">
                         <div className="wpo-contact-form-area">
-                            <SectionTitle MainTitle={'Bạn có tham dự hay không ?'}/>
+                            <SectionTitle MainTitle={'Mời bạn chung vui'}/>
                             <form onSubmit={this.subimtHandler} className="form">
                                 <div className="row">
                                     <div>
@@ -95,15 +95,7 @@ class RSVP extends Component {
                                             <p>{error.name ? error.name : ''}</p>
                                         </div>
                                     </div>
-                                    <div>
-                                        <select name="service" className="form-control" value={service} onChange={this.changeHandler}>
-                                            <option>Bạn Bè</option>
-                                            <option>Họ Hàng</option>
-                                            <option>Đồng Nghiệp</option>
-                                            <option>Khác</option>
-                                        </select>
-                                        <p>{error.service ? error.service : ''}</p>
-                                    </div>
+            
                                     <div>
                                         <div className="form-field">
                                             <input onChange={this.changeHandler} value={email} type="text" className="form-control" name="email" placeholder="Lời chúc cho Cô Dâu/Chú Rễ"/>
@@ -123,9 +115,10 @@ class RSVP extends Component {
                                     </div>
                                     <div>
                                         <select name="cango" className="form-control" value={cango} onChange={this.changeHandler}>
-                                            <option>Đi hoặc Không</option>
-                                            <option>Đi</option>
-                                            <option>Không Đi</option>
+                                            <option>Xác nhận tham dự</option>
+                                            <option>Tham dự ở Hướng Hóa</option>
+                                            <option>Tham dự ở Quy Nhơn</option>
+                                            <option>Không thể tham gia</option>
                                         </select>
                                         <p>{error.cango ? error.cango : ''}</p>
                                     </div>
