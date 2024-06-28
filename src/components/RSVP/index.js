@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component,useRef } from 'react'
 import SectionTitle from '../../components/SectionTitle'
-
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import vec1 from '../../images/contact/1.png'
 import vec2 from '../../images/contact/2.png'
-
+import emailjs from '@emailjs/browser';
 class RSVP extends Component {
-
+    
 
     state = {
         name: '',
@@ -15,7 +16,10 @@ class RSVP extends Component {
         service: '',
         guest: '',
         cango: '',
-        error: {}
+        error: {},
+        show:false,
+        click:false,
+        showerr:false
     }
 
 
@@ -45,11 +49,11 @@ class RSVP extends Component {
         if (email === '') {
             error.email = "Hãy điền lời chúc";
         }
-        if (guest === '') {
-            error.guest = "Hãy chọn số người đi cùng";
-        }
-        if (cango === '') {
-            error.cango = "Vui lòng xác nhận tham dự";
+        // if (guest === '') {
+        //     error.guest = "Hãy chọn số người đi cùng";
+        // }
+        if (cango === '' || cango === 'Xác nhận tham dự') {
+            error.cango = "Vui lòng xác nhận có tham dự hay không";
         }
 
 
@@ -69,6 +73,55 @@ class RSVP extends Component {
                 error: {}
             })
         }
+        if (name !== '' && email !== '' && cango !== '') {
+            if (cango === 'Không thể tham gia'){
+                emailjs
+                .send('service_5afkz74', 'template_7m7fqzc',{
+                    name: name,
+                    email: email,
+                    guest: 0,
+                    cango:cango
+                }
+                ,{publicKey: '8MLY0451tzcETr5fS'})
+                .then(
+                    () => {
+                        this.setState({show:true})
+                    },
+                    (error) => {
+                        this.setState({showerr:true})
+                    },
+                );
+            }
+            else{
+                emailjs
+                .send('service_5afkz74', 'template_7m7fqzc',{
+                    name: name,
+                    email: email,
+                    guest: guest,
+                    cango:cango
+                }
+                ,{publicKey: '8MLY0451tzcETr5fS'})
+                .then(
+                    () => {
+                        this.setState({show:true})
+                    },
+                    (error) => {
+                        this.setState({showerr:true})
+                    },
+                );
+            }
+            
+            this.setState({
+            click:true})
+
+            
+            
+        }
+
+        
+
+
+
     }
 
     render(){
@@ -104,8 +157,7 @@ class RSVP extends Component {
                                     </div>
                                     <div>
                                         <select name="guest" className="form-control" value={guest} onChange={this.changeHandler}>
-                                            <option>Số người</option>
-                                            <option>0</option>
+                                            <option>Số người (Không điền nếu không đi)</option>
                                             <option>01</option>
                                             <option>02</option>
                                             <option>03</option>
@@ -124,9 +176,34 @@ class RSVP extends Component {
                                     </div>
                                     <div className="submit-area">
                                         <div className="form-submit">
-                                            <button type="submit" className="theme-btn-s3">Send Message</button>
+                                            <button type="submit" className="theme-btn-s3" disabled={this.state.click}>Send Message</button>
                                         </div>
                                     </div>
+                                    {/* <Button variant="primary" onClick={() => this.setState({ show: true })}>
+                                        Launch demo modal 
+                                    </Button> */}
+                                    <Modal show={this.state.show} onHide={() => this.setState({ show:false })} style={{top: "35%"}}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Cảm ơn bạn</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Hẹn gặp lại bạn</Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={() => this.setState({ show: !this.state.show, click: false })} >
+                                                Close
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
+                                    <Modal show={this.state.showerr} onHide={() => this.setState({ showerr:false })} style={{top: "35%"}}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Có lỗi rồi</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Liên hệ với cô dâu để sửa</Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={() => this.setState({ showerr: !this.state.showerr, click: false })} >
+                                                Close
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
                                 </div>
                             </form>
                             <div className="border-style"></div>
@@ -138,7 +215,9 @@ class RSVP extends Component {
                             <img src={vec2} alt=""/>
                         </div>
                     </div>
+                    
                 </div>
+                
             </section>
         )
     }
